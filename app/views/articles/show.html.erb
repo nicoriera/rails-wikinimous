@@ -1,0 +1,16 @@
+<div class="box-show">
+
+  <div class="links">
+      <%= link_to 'Update article', edit_article_path %>
+      <%= link_to "Back to articles", articles_path %>
+      <%= link_to "Delete article",
+        article_path(@article),
+        data: {turbo_method: :delete, turbo_confirm: "Are you sure?"}
+      %>
+    </div>
+
+  <div class="article-content">
+  <h1><%= @article.title %></h1>
+    <p><%= @article.content %></p>
+  </div>
+</div>
